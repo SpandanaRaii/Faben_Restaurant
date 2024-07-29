@@ -1,0 +1,223 @@
+.getintouch {
+  text-align: center;
+  padding: 20px;
+  background-color: #F4F2F1;
+  width: 97%;
+  margin-top: 30px;
+}
+
+.getintouch h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  gap: 30px;
+}
+
+.contactItem {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+.contactItem h2 {
+  color:#550000;
+}
+
+
+.icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+p {
+  margin: 5px 0;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contactFormContainer {
+  background-color: #F4F2F1;
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  margin-top: 70px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 60px;
+}
+
+.contactFormContainer form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.contactFormContainer h3 {
+  color:#550000 ;
+}
+
+.contactFormContainer input,
+.contactFormContainer textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #550000;
+  border-radius: 5px;
+  height: 37px;
+}
+
+.contactFormContainer input:focus,
+.contactFormContainer textarea:focus {
+  outline: none;
+  border-color: #550000;
+}
+
+.contactFormContainer button {
+  background-color:#550000;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* .contactFormContainer button:hover {
+  background-color: rgb(126, 126, 25);
+} */
+
+.contactLocation {
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .contactContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contactFormContainer {
+    width: 300px;
+    margin-left: 0;
+  }
+
+  .getintouch h2 {
+    font-size: 22px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .contactContainer {
+    justify-content: center;
+  }
+
+  .contactFormContainer {
+    width: 250px;
+  }
+
+  .getintouch h2 {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .getintouch {
+    margin-left: 10px;
+    width: 87%;
+    
+  }
+  .contactContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contactFormContainer {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .getintouch h2 {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .getintouch {
+    margin-left: 10px;
+    width: 85%;
+    
+  }
+
+  .contactContainer {
+    margin-left: 0;
+  }
+
+  .contactFormContainer {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .contactFormContainer input,
+  .contactFormContainer textarea {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .contactFormContainer button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .getintouch h2 {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 319px) {
+  .getintouch {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .contactFormContainer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contactFormContainer input,
+  .contactFormContainer textarea {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .contactFormContainer button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .getintouch h2 {
+    font-size: 14px;
+  }
+}

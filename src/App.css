@@ -1,0 +1,9 @@
+:root {
+    --Menubar-height: 60px; 
+}
+
+.section {
+    padding-top: var(--Menubar-height);
+    margin-top: -var(--Menubar-height);
+}
+

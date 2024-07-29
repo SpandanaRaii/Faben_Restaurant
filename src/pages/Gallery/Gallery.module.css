@@ -1,0 +1,140 @@
+.galleryContainer {
+  width: 90%;
+  margin-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.galleryNav {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center align navigation items */
+}
+
+.galleryNav a {
+  text-decoration: none;
+  color: #550000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.galleryNav a.active {
+  border-bottom: 4px solid #550000;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.galleryImages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid columns */
+  grid-gap: 20px; 
+  justify-items: center; 
+  margin-top: 20px;
+}
+
+.galleryItem img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.galleryItem img:hover {
+  transform: scale(1.05);
+}
+
+.orange {
+  color: #550000;
+}
+
+@media (max-width: 1200px) {
+  .galleryContainer {
+    width: 95%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .galleryNav {
+    gap: 15px;
+  }
+
+  .galleryImages {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .galleryContainer {
+    width: 95%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .galleryNav {
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    gap: 10px;
+  }
+
+  .galleryImages {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .galleryContainer {
+    width: 93%; 
+    margin-top: 60px; 
+    margin-left: 23px;
+  }
+
+  .galleryNav {
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    gap: 10px; 
+  }
+
+  .galleryImages {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 15px; 
+  }
+
+  .galleryItem img {
+    margin-top: 20px; 
+  }
+}
+
+@media (max-width: 420px) {
+  .galleryContainer{
+    margin-left: 20px;
+    width: 90%;
+  }
+  .galleryImages {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}
+
+@media (max-width: 319px) {
+  .galleryContainer {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .galleryNav {
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .galleryImages {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  .galleryItem img {
+    height: 200px; 
+  }
+}

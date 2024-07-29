@@ -1,0 +1,107 @@
+.adminContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 590px;
+
+  }
+  
+  .bookingForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bookingForm input,
+  .bookingForm button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1 1 200px; /* Ensures inputs are flexible and wrap */
+  }
+  
+  .bookingForm button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .bookingsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .bookingsTable th,
+  .bookingsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .bookingsTable th {
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+  }
+  
+  .bookingsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .bookingsTable button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .bookingForm {
+      flex-direction: column; /* Stack form elements vertically on small screens */
+    }
+  
+    .bookingForm input,
+    .bookingForm button {
+      flex: 1 1 auto; /* Make sure inputs and button are full width */
+    }
+  
+    .bookingsTable th,
+    .bookingsTable td {
+      display: block; /* Stack table cells on small screens */
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .bookingsTable th {
+      background-color: transparent;
+      color: #333;
+    }
+  
+    .bookingsTable tr {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      display: block;
+    }
+  
+    .bookingsTable tr:nth-child(even) {
+      background-color: transparent;
+    }
+  
+    .bookingsTable tr td:last-child {
+      border-bottom: none;
+    }
+  
+    .bookingsTable button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .bookingForm button {
+      flex: 0 1 auto; /* Allow button to shrink */
+      width: auto; /* Keep width to content */
+      padding: 5px 10px; /* Make button smaller */
+    }
+  }

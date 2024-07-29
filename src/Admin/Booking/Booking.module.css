@@ -1,0 +1,121 @@
+.Booking {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+    height: 550px;
+
+  }
+  
+  .bookingsTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .bookingsTable th, .bookingsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .bookingsTable th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .bookingsTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .statusButton {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .deleteButton {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .pagination button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .Booking {
+      width: 90%;
+    }
+  
+    .pagination {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pagination button {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Booking {
+      width: 95%;
+    }
+  
+    .bookingsTable th, .bookingsTable td {
+      padding: 6px;
+    }
+  
+    .pagination button {
+      padding: 8px 12px;
+    }
+  
+    .statusButton, .deleteButton {
+      padding: 6px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Booking {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .bookingsTable th, .bookingsTable td {
+      padding: 4px;
+    }
+  
+    .statusButton, .deleteButton {
+      padding: 5px 8px;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .pagination {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pagination button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+  }

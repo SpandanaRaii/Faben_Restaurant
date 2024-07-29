@@ -1,0 +1,55 @@
+/* AddRoom.module.css */
+.addForm {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .addForm h2 {
+    margin-bottom: 20px;
+  }
+  
+  .addForm div {
+    margin-bottom: 10px;
+  }
+  
+  .addForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .addForm input,
+  .addForm textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .addForm button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .addForm button[type="button"] {
+    background-color: #dc3545;
+  }
+  
+  .addForm input[type="file"] {
+    padding: 5px;
+  }
+  
+  .previewImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  

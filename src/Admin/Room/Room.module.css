@@ -1,0 +1,73 @@
+.rooms {
+  padding: 20px;
+  height: 590px;
+
+}
+
+.rooms h2 {
+  margin-bottom: 20px;
+}
+
+.rooms button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.rooms .uploadLabel {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.rooms .uploadLabel:hover {
+  background-color: #218838;
+}
+
+.rooms table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rooms th, .rooms td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.rooms th {
+  background-color: black;
+}
+
+.rooms td button {
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.rooms td button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.rooms td button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.rooms img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 5px;
+}

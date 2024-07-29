@@ -1,0 +1,157 @@
+.facilitiesContainer {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+    height: 550px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .addButton {
+    float: right;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .facilityForm {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .facilityForm div {
+    margin-bottom: 10px;
+  }
+  
+  .facilityForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .facilityForm input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .facilityForm button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .facilitiesTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .facilitiesTable th, .facilitiesTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .facilitiesTable th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .facilitiesTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .deleteButton {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1200px) {
+    .facilitiesContainer {
+      width: 90%;
+    }
+  
+    .addButton {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      float: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .facilitiesContainer {
+      width: 95%;
+    }
+  
+    .facilityForm {
+      padding: 15px;
+    }
+  
+    .facilityForm input {
+      padding: 10px;
+    }
+  
+    .facilityForm button {
+      width: 100%;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .facilitiesContainer {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    .addButton {
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    .facilityForm {
+      padding: 10px;
+    }
+  
+    .facilityForm input {
+      padding: 12px;
+    }
+  
+    .facilityForm button {
+      width: 100%;
+      padding: 14px;
+    }
+  
+    .facilitiesTable th, .facilitiesTable td {
+      padding: 6px;
+    }
+  
+    .deleteButton {
+      padding: 8px 12px;
+    }
+  }
