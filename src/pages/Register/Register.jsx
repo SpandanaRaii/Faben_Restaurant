@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Register.module.css';
+import regImage from '../../assets/image1.png';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Register = () => {
   const navigate = useNavigate();
-  const handleLoginClick = () => {
-    navigate('/login')
-  }
+  const [showPassword, setShowPassword] = useState(false);
+  const [showCPassword, setShowCPassword] = useState(false);
 
-  
+  const passwordVisible = () => {
+    setShowPassword(prevState => !prevState);
+  };
+
+  const cPasswordVisible = () => {
+    setShowCPassword(prevState => !prevState);
+  };
+
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
-    name:'',
-    dob:'',
-    number:'',
+    confirmPassword: '',
+    name: '',
+    dob: '',
+    number: '',
     rememberMe: false,
   });
 
-  
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -31,17 +44,19 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
+    // Add form validation and submission logic here
   };
 
   return (
     <div className={style.regContainer}>
       <div className={style.imageContainer}>
+        {/* Image content here */}
       </div>
       <div className={style.formContainer}>
-        <h2 className={style.title}>Welcome Back</h2>
-        <p>Enter your details to sign in</p>
+        <h2 className={style.title}>Register</h2>
+        <p>Create your account</p>
         <form onSubmit={handleSubmit} className={style.form}>
-        <label>
+          <label>
             Full Name
             <input
               type="text"
@@ -58,7 +73,7 @@ const Register = () => {
             <input
               type="email"
               name="email"
-              placeholder="Enter your mail"
+              placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
               required
@@ -69,7 +84,7 @@ const Register = () => {
             Date Of Birth
             <input
               type="date"
-              name="date"
+              name="dob"
               placeholder="Enter your date of birth"
               value={formData.dob}
               onChange={handleChange}
@@ -90,19 +105,44 @@ const Register = () => {
           </label>
 
           <label>
-            Enter your Password 
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
+            Password
+            <div className={style.passwordInputContainer}>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+              <FontAwesomeIcon
+                icon={showPassword ? faEyeSlash : faEye}
+                className={style.passwordIcon}
+                onClick={passwordVisible}
+              />
+            </div>
           </label>
 
+          <label>
+            Confirm Password
+            <div className={style.passwordInputContainer}>
+              <input
+                type={showCPassword ? 'text' : 'password'}
+                name="confirmPassword"
+                placeholder="Confirm Password"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                required
+              />
+              <FontAwesomeIcon
+                icon={showCPassword ? faEyeSlash : faEye}
+                className={style.passwordIcon}
+                onClick={cPasswordVisible}
+              />
+            </div>
+          </label>
 
-          <button type="submit" className={style.submitButton} onClick={handleLoginClick}>Submit</button>
+          <button type="submit" className={style.submitButton}>Submit</button>
         </form>
         <div className={style.signUp}>
           <p>Already have an account? <a href="#" onClick={handleLoginClick}>Log In</a></p>
@@ -117,5 +157,4 @@ const Register = () => {
   );
 };
 
-export default Register
-
+export default Register;

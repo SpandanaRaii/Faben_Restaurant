@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import style from './Login.module.css';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,19 +11,20 @@ const Login = () => {
     rememberMe: false,
   });
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const navigate = useNavigate();
   const handleLoginClick = () => {
-    navigate('/register')
-  }
+    navigate('/register');
+  };
 
-  const submitButton = () => {
-    navigate('/')
-  }
+  const handleSubmitClick = () => {
+    navigate('/');
+  };
 
-  const passwordBtn = () => {
-    navigate('/password')
-  }
-
+  const handleForgotClick = () => {
+    navigate('/password');
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -36,16 +39,21 @@ const Login = () => {
     console.log('Form submitted:', formData);
   };
 
+
+
+  const passwordVisible = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className={style.container}>
-      <div className={style.imageContainer}>
-      </div>
+      <div className={style.imageContainer}></div>
       <div className={style.formContainer}>
         <h2 className={style.title}>Welcome Back</h2>
         <p>Enter your details to sign in</p>
         <form onSubmit={handleSubmit} className={style.form}>
           <label>
-            Email 
+            Email
             <input
               type="email"
               name="email"
@@ -55,26 +63,31 @@ const Login = () => {
               required
             />
           </label>
-          <label>
-            Enter your Password 
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
+          <label className={style.passwordLabel}>
+            Enter your Password
+            <div className={style.passwordInputContainer}>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                name="password"
+                placeholder="Password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+              <FontAwesomeIcon
+                icon={showPassword ? faEyeSlash : faEye}
+                className={style.passwordIcon}
+                onClick={passwordVisible}
+              />
+            </div>
           </label>
           <div className={style.formFooter}>
-            
-            <a href="#" className={style.forgotPassword} onClick={passwordBtn}>Forgot Password?</a>
+            <a href="#" className={style.forgotPassword} onClick={handleForgotClick}>Forgot Password?</a>
           </div>
-
-          <button type="submit" className={style.submitButton} onClick={submitButton}> Submit</button>
+          <button type="submit" className={style.submitButton} onClick={handleSubmitClick}>Submit</button>
         </form>
         <div className={style.signUp}>
-        <p>Don't have an account? <a href="#" onClick={handleLoginClick}>Sign Up</a></p>
+          <p>Don't have an account? <a href="#" onClick={handleLoginClick}>Sign Up</a></p>
         </div>
         <div className={style.footerLinks}>
           <a href="#">FAQ</a>

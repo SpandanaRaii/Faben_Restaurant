@@ -1,124 +1,187 @@
 .emailverification {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 90%; 
-    margin: 70px 20px 50px 500px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  margin: 70px auto;
+}
+
+.emailverification h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+.emailicon img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: -20px;
+}
+
+.emailverification p {
+  margin-bottom: 30px;
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.emailinput, .code {
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  background-color: whitesmoke;
+  color: #333;
+  font-size: 14px;
+}
+
+.codeinput {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.codeinput .code {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.codeinput .sendbutton {
+  background-color: #550000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 10px;
+  height: 40px;
+  width: 100px;
+  margin-top: 5px;
+}
+
+.verifybutton {
+  background-color: #550000;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 9px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+}
+
+.goback {
+  color: #666;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.goback:hover {
+  color: #333;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .emailverification {
+    width: 60%;
   }
-  
-  .emailverification h2 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 28px;
+}
+
+@media (max-width: 1024px) {
+  .emailverification {
+    width: 70%;
   }
-  
-  .emailicon img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: -20px;
+}
+
+@media (max-width: 768px) {
+  .emailverification {
+    width: 80%;
+    padding: 30px;
   }
-  
-  .emailverification p {
-    margin-bottom: 30px;
-    color: #666;
-    text-align: center;
-    font-size: 14px;
-    width: 400px;
-  }
-  
-  .emailinput, .code {
-    padding: 15px;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-    background-color: whitesmoke;
-    color: #333;
-    font-size: 14px;
-    height: 10px;
-  }
-  
-  .codeinput {
-    display: flex;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-  }
-  
-  .codeinput .code {
-    flex-grow: 1;
-    font-size: 14px;
-  }
-  
-  .codeinput .sendbutton {
-    background-color: #550000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 7px;
-    cursor: pointer;
-    margin-left: 10px;
-    height: 40px;
-    width: 100px;
-    margin-top: 5px;
-  }
-  
+
   .verifybutton {
-    background-color: #550000;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    font-size: 18px;
-    border-radius: 9px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 400px;
+    width: 60%;
   }
-  
-  .goback {
-    color: #666;
-    text-decoration: none;
-    margin-top: 20px;
+}
+
+@media (max-width: 420px) {
+  .emailverification {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .emailverification h2 {
+    font-size: 24px;
+  }
+
+  .emailverification p {
+    font-size: 12px;
+  }
+
+  .emailinput, .code {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .codeinput .sendbutton {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .verifybutton {
+    padding: 12px 16px;
     font-size: 16px;
   }
-  
-  .goback:hover {
-    color: #333;
+
+  .goback {
+    font-size: 14px;
   }
-  
-  @media (max-width: 600px) {
-    .emailverification {
-      padding: 30px;
-      max-width: 90%;
-    }
-    
-    .emailverification h2 {
-      font-size: 24px;
-    }
-    
-    .emailverification p, .emailinput, .code, .codeinput .sendbutton, .verifybutton, .goback {
-      font-size: 16px;
-    }
-    
-    .emailinput, .code {
-      padding: 12px;
-    }
-    
-    .codeinput .sendbutton {
-      padding: 8px 16px;
-      font-size: 14px;
-    }
-    
-    .verifybutton {
-      padding: 12px 16px;
-      font-size: 16px;
-    }
+}
+
+@media (max-width: 319px) {
+  .emailverification {
+    width: 95%;
+    padding: 15px;
   }
+
+  .emailverification h2 {
+    font-size: 20px;
+  }
+
+  .emailverification p {
+    font-size: 10px;
+  }
+
+  .emailinput, .code {
+    padding: 10px;
+    font-size: 10px;
+  }
+
+  .codeinput .sendbutton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .verifybutton {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .goback {
+    font-size: 12px;
+  }
+}

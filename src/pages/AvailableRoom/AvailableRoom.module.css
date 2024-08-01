@@ -1,4 +1,4 @@
-/* Common styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -236,13 +236,19 @@ body {
 
   @media (max-width: 767px) {
     .roomDetails {
-      width: 700%; 
+      width: 90%; 
+    }
+
+    .roomDetails h2{
+      text-align: left;
+    }
+
+    .roomDetails p{
+      margin-right: auto;
     }
   
   
     .bookingInfo {
-      flex-direction: column-reverse; 
-      align-items: flex-start;
       margin-top: 10px; 
     }
   
